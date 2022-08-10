@@ -10,13 +10,147 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+    :root {
+      /* Primary */
+      --dark-cyan: hsl(158, 36%, 37%);
+      --cream:  hsl(30, 38%, 92%);
+
+      /* Neutral */
+      --very-dark-blue: hsl(212, 21%, 14%);
+      --dark-grayish-blue: hsl(228, 12%, 48%);
+      --white: hsl(0, 0%, 100%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--cream);
+    }
+
+    p {
+      font-size: 12px;
+      font-family: 'Montserrat';
+    }
+
+    .card {
+      font-family: 'Fraunces';
+      width: 500px;
+      height: 375px;
+      background-color: var(--white);
+      display: flex;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .product__image > .image__mobile {
+      display: none;
+    }
+
+    .product {
+      margin: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product__subtitle {
+      font-family: 'Montserrat';
+      color: var(--dark-grayish-blue);
+      margin-top: 2px;
+      margin-bottom: 15px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    .product__title {
+      font-size: 1.7rem;
+      color: var(--very-dark-blue);
+      line-height: 1.7rem;
+      margin-bottom: 20px;
+    }
+
+    .product__description {
+      color: var(--dark-grayish-blue);
+      line-height: 1.2rem;
+      margin-bottom: 21px;
+    }
+
+    .product__price {
+      margin-bottom: 23px;
+      display: flex;
+      align-items: center;
+    }
+
+    .actual__price {
+      font-size: 1.6rem;
+      color: var(--dark-cyan);
+    }
+
+    .discount__price {
+      font-family: 'Montserrat';
+      margin-left: 16px;
+      color: var(--dark-grayish-blue);
+      font-size: 12px;
+      text-decoration: line-through;
+    }
+
+    .product__button {
+      background-color: var(--dark-cyan);
+      color: var(--white);
+      font-family: 'Montserrat';
+      border: none;
+      border-radius: 4px;
+      padding: 12px 0;
+    }
+
+    .product__button > img {
+      margin-right: 5px;
+    }
+
+    .attribution { 
+      position: fixed;
+      bottom: 0px;
+      font-size: 11px;
+    }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media screen and (max-width: 375px) {
+      .product__image > .image__desktop {
+      display: none;
+      }
+      .product__image > .image__mobile {
+      display: inline;
+      }
+      .card {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 610px;
+      }
+    }
   </style>
 </head>
 <body>
   <section class="card">
-    <div class="product__image"></div>
+    <div class="product__image">
+      <img class="image__desktop" src="./images/image-product-desktop.jpg" alt="desktop" width="250">
+      <img class="image__mobile" src="./images/image-product-mobile.jpg" alt="desktop" width="375">
+    </div>
     <div class="product">
       <div class="product__subtitle">Perfume</div>
       <div class="product__title">Gabrielle Essence Eau De Parfum</div>
@@ -26,7 +160,10 @@
         <span class="actual__price">$149.99</span>
         <span class="discount__price">$169.99</span>
       </div>
-      <button class="product__button" type="submit"> Add to Cart</button>
+      <button class="product__button">
+        <img src="./images/icon-cart.svg" alt="icon" width="12px" height="12px">
+        Add to Cart
+      </button>
     </div>
   </section>
   <div class="attribution">
