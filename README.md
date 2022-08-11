@@ -27,7 +27,9 @@ Users should be able to:
 
 ### Link
 
+- Solution URL: [https://www.frontendmentor.io/solutions](https://www.frontendmentor.io/solutions/responsive-product-preview-card-component-using-css-flexbox--OjgNWwMj7)
 - Live Site URL: [https://frontendmentor-task1-daironcanel.netlify.app/](https://frontendmentor-task1-daironcanel.netlify.app/)
+https://www.frontendmentor.io/solutions/responsive-product-preview-card-component-using-css-flexbox--OjgNWwMj7
 
 ## My process
 
